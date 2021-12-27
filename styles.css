@@ -1,0 +1,55 @@
+* {
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 5px;
+    background: rgb(243, 243, 243);
+    border-color: rgb(206, 0, 0);
+    border-radius: 3px;
+}
+button {
+    cursor: pointer;
+}
+button:active {
+    transform: translateY(1px);
+}
+#weather-wrapper {
+    border: 1px solid rgb(230, 0, 0);
+    position: relative;
+    margin: 15px;
+    padding: 20px;
+    height: 100vh;
+    background-color: lightslategray;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+#weather-wrapper > h1 {
+    background: none;
+    margin-bottom: 15px;
+}
+#weather-wrapper > small {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: none;
+    z-index: 9999;
+}
+#searchBox {
+    margin: 5px;
+    float: left;
+}
+#searchBox:focus-visible {
+    outline-color:rgb(230, 0, 0);
+}
+#searchSubmit {
+    margin: 5px;
+    float: left;
+}
+#forecast {
+    position: relative;
+    background: none;
+    border: 2px solid red;
+    box-shadow: 0 0 6px 4px rgb(0, 0, 0);
+    border-radius: 3px;
+    height: auto;
+    margin-top: 80px;
+}
