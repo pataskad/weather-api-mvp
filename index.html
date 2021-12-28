@@ -14,9 +14,21 @@
         <h1>Weather App Demo</h1>
         <input id="searchBox" type="text" placeholder="Enter City">
         <button id="searchSubmit" type="submit">Search City</button>
+        <label class="toggle-units-btn">
+            <input type="checkbox">
+            <span class="round-slider rounded">
+                <p class="unit-label"></p>
+            </span>
+        </label>
 
         <div id="forecast">
-            
+            <div class="search-results-output"></div>
+            <div id="temp" class="forecast-display">
+                <h1 id="current-temp"></h1>
+            </div>
+            <div id="temp-details" class="forecast-display">
+
+            </div>
         </div>
 
         <small>Created By Dallas Pataska</small>

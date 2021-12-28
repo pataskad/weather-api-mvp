@@ -17,8 +17,7 @@ button:active {
     border: 5px solid rgb(139, 48, 48);
     position: relative;
     margin: 15px;
-    padding: 20px;
-    height: 100vh;
+    padding: 15px 15px 35px 15px;
     background-color: lightslategray;
     box-shadow: 0 0 5px rgb(0, 0, 0);
 }
@@ -46,12 +45,109 @@ button:active {
     margin: 5px;
     float: left;
 }
+.toggle-units-btn {
+    position: relative;
+    float: right;
+    pointer-events: auto;
+    width: 4rem;
+    height: auto;
+    margin: 5px;
+    background: none;
+}
+.round-slider {
+    position: absolute;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(125, 2, 2, 0.966);
+    transition: 300ms;
+}
+.round-slider:before {
+    position: absolute;
+    content: '';
+    height: 19px;
+    width: 19px;
+    left: 5px;
+    bottom: 4px;
+    background-color: lightgray;
+    transition: .5s;
+}
+.toggle-units-btn input:checked + .round-slider {
+    background-color: green;
+}
+.toggle-units-btn input:checked + .round-slider:before {
+    transform: translateX(15px);
+}
+.round-slider.rounded {
+    border-radius: 15px;
+}
+.round-slider.rounded:before {
+    border-radius: 50%;
+    pointer-events: auto;
+}
+.unit-label {
+    background: transparent;
+    float: right;
+    font-weight: bold;
+    position: absolute;
+    right: 3px;
+    bottom: -1px;
+    cursor: pointer;
+    pointer-events: auto;
+    color: gainsboro;
+    font-size: 1.10rem;
+}
+#unit-label-output {
+    background: transparent;
+    float: right;
+    font-weight: bold;
+    position: absolute;
+    padding-right: 5px;
+    right: 5px;
+    bottom: -1px;
+    cursor: pointer;
+    pointer-events: auto;
+    color: gainsboro;
+    font-size: 1.10rem;
+    z-index: 9999;
+}
+.left {
+    right: 23px;
+}
 #forecast {
     position: relative;
-    background: none;
+    overflow: hidden;
+    background: gainsboro;
     border: 2px solid rgb(201, 29, 29);
     box-shadow: 0 0 6px 4px rgb(0, 0, 0);
     border-radius: 3px;
     height: auto;
     margin-top: 100px;
+}
+.forecast-display {
+    background: gainsboro;
+    vertical-align: top;
+    display: inline-block;
+    width: 43vw;
+    height: 65vh;
+}
+#current-temp {
+    background: none;
+    color: rgb(66, 60, 60);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15rem;
+    float: left;
+}
+#degrees-symbol {
+    background: none;
+    font-size: 12rem;
+    margin-left: -3rem;
+}
+.search-results-output {
+    background: none;
+    display: flex;
+    font-style: italic;
 }
