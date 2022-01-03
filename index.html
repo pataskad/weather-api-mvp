@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="weather-wrapper">
-        <h1>Weather App Demo</h1>
+        <h1>Weather API Demo</h1>
         <input id="searchBox" type="text" placeholder="Enter City">
         <button id="searchSubmit" type="submit">Search City</button>
         <label class="toggle-units-btn">
@@ -26,12 +26,20 @@
             <div id="temp" class="forecast-display">
                 <h1 id="current-temp"></h1>
             </div>
-            <div id="temp-details" class="forecast-display">
-
+            <div class="forecast-display">
+                <div class="temp-details">
+                    <p>Skies Right Now:</p><h2 id="current-sky-cover"></h2>
+                    <p>Feels Like:</p><h2 id="feels-like"></h2>
+                    <p>High:</p><h2 id="today-high"></h2>
+                    <p>Low:</p><h2 id="today-low"></h2>
+                    <p>Wind Speed:</p><h2 id="wind-speed"></h2>
+                    <p>Wind Direction:</p><h2 id="wind-direction"></h2>
+                    <p>Humidity:</p><h2 id="humidity"></h2>
+                </div>
             </div>
         </div>
 
-        <small>Created By Dallas Pataska</small>
+        <a href="https://github.com/pataskad">Created By Dallas Pataska</a>
     </div>
 </body>
 </html>

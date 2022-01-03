@@ -3,12 +3,13 @@
     font-family: sans-serif;
     margin: 0;
     padding: 5px;
-    background: rgb(243, 243, 243);
+    background: rgb(27, 26, 26);
     border-color: rgb(206, 0, 0);
     border-radius: 3px;
 }
 button {
     cursor: pointer;
+    background-color: ghostwhite;
 }
 button:active {
     transform: translateY(1px);
@@ -16,7 +17,7 @@ button:active {
 #weather-wrapper {
     border: 5px solid rgb(139, 48, 48);
     position: relative;
-    margin: 15px;
+    margin: 0.25rem;
     padding: 15px 15px 35px 15px;
     background-color: lightslategray;
     box-shadow: 0 0 5px rgb(0, 0, 0);
@@ -26,20 +27,26 @@ button:active {
     margin-bottom: 15px;
     color: ghostwhite;
 }
-#weather-wrapper > small {
+#weather-wrapper > a {
     position: absolute;
+    font-size: 0.75rem;
+    text-decoration: none;
     color: ghostwhite;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0.25rem;
+    right: 1.5rem;
     background: none;
     z-index: 9999;
+}
+#weather-wrapper > a:hover {
+    text-decoration: underline;
 }
 #searchBox {
     margin: 5px;
     float: left;
+    background-color: ghostwhite;
 }
 #searchBox:focus-visible {
-    outline-color:rgb(139, 48, 48);
+    outline-color:rgb(139, 5, 5);
 }
 #searchSubmit {
     margin: 5px;
@@ -118,7 +125,8 @@ button:active {
 }
 #forecast {
     position: relative;
-    overflow: hidden;
+    padding: 0 0 0 0;
+    overflow: auto;
     background: gainsboro;
     border: 2px solid rgb(201, 29, 29);
     box-shadow: 0 0 6px 4px rgb(0, 0, 0);
@@ -128,16 +136,16 @@ button:active {
 }
 .forecast-display {
     background: gainsboro;
+    color: rgb(66, 60, 60);
     vertical-align: top;
     display: inline-block;
+    font-style: italic;
     width: 43vw;
     height: 65vh;
 }
 #current-temp {
     background: none;
-    color: rgb(66, 60, 60);
     font-weight: bold;
-    font-style: italic;
     font-size: 15rem;
     float: left;
 }
@@ -147,7 +155,34 @@ button:active {
     margin-left: -3rem;
 }
 .search-results-output {
-    background: none;
+    background: lightgray;
     display: flex;
     font-style: italic;
+    padding: 10px;
+    border-bottom: 2px solid rgb(206, 0, 0);
+    margin-bottom: 10px;
+}
+.degree-symbol-only {
+    background: none;
+    margin-left: -.5rem;
+}
+.temp-details {
+    background: none;
+    border: 10px solid rgba(29, 25, 25, 0.562);
+    border-radius: 10px;
+    padding: 1.25rem;
+}
+.temp-details > h2 {
+    background: none;
+    text-align: left;
+    font-style: italic;
+    margin-left: 1rem;
+    color: rgb(206, 0, 0);
+}
+.temp-details > p {
+    font-style: italic;
+    background: lightgray;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    text-align: left;
 }
