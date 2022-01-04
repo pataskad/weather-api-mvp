@@ -36,8 +36,7 @@ async function getWeather() { // syntactic sugar for promises!
         if (searchData.cod === "400" || searchData.cod === "404") {
             throw new Error("=> Please enter a valid or higher populated city");
         } else {
-            console.log(searchData); // testing 
-
+            // parse desired weather parameters before pushing to display
             currentTemp = parseInt(searchData.main.temp.toFixed(0));
             currentSkyCover = searchData.weather[0].main;
             feelsLike = parseInt(searchData.main.feels_like.toFixed(0));
@@ -85,9 +84,11 @@ function showWeather() {
     hgOutput.innerHTML = `${humidity}`;
 }
 function updateSearchString() {
-    searchString = document.querySelector("#searchBox").value;
-    document.querySelector("#searchBox").value = "";
-    getWeather();
+    if (document.querySelector("#searchBox").value) {
+        searchString = document.querySelector("#searchBox").value;
+        document.querySelector("#searchBox").value = "";
+        getWeather(); 
+    }
 }
 function toggleUnits() {
     if (weatherUnits === "imperial") {
